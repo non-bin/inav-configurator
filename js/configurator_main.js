@@ -4,6 +4,8 @@ window.$ = window.jQuery =  require('jquery'),
                             require('./libraries/jquery.flightindicators'),
                             require('./libraries/jquery.nouislider.all.min'),
                             require('./libraries/jquery.ba-throttle-debounce');
+                            
+if (typeof window === 'undefined') require('./stubs/electronAPI.js')
 
 const { app } = require('@electron/remote');
 const d3 = require('./libraries/d3.min');

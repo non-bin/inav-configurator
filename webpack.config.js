@@ -45,9 +45,14 @@ module.exports = (env, argv) => ({
   },
   resolve: {
     alias: {
-      fs: path.resolve(__dirname, './js/stub.js'),
-      dgram: path.resolve(__dirname, './js/stub.js'),
-      child_process: path.resolve(__dirname, './js/stub.js')
+      'fs': path.resolve(__dirname, './js/stubs/stub.js'),
+      'dgram': path.resolve(__dirname, './js/stubs/stub.js'),
+      'child_process': path.resolve(__dirname, './js/stubs/stub.js'),
+      'electron-store': path.resolve(__dirname, './js/stubs/electron-store.js'),
+      '@electron/remote': path.resolve(__dirname, './js/stubs/electron_remote.js'),
+      'electron': path.resolve(__dirname, './js/stubs/electron.js'),
+      'electron-window-state': path.resolve(__dirname, './js/stubs/electron-window-state.js'),
+      'electron/renderer': path.resolve(__dirname, './js/stubs/electron_renderer.js'),
     },
     fallback: {
       'stream': require.resolve('stream-browserify'),
@@ -65,7 +70,8 @@ module.exports = (env, argv) => ({
       'child_process': false,
       'dgram': false,
       'net': false,
-      'nw.gui': false
+      'nw.gui': false,
+      'electron-squirrel-startup': false
     }
   }
 });
