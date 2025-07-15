@@ -2,8 +2,8 @@
 const path = require('path');
 const { app } = require('@electron/remote');
 const { SerialPort } = require('serialport');
-const { spawn } = require('node:child_process');
-const { chmod, rm } = require('node:fs');
+const { spawn } = require('child_process');
+const { chmod, rm } = require('fs');
 
 const { GUI } = require('./gui');
 

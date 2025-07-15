@@ -277,10 +277,10 @@ $(function() {
                             require('./../tabs/cli');
                             TABS.cli.initialize(content_ready);
                             break;
-                        case 'ez_tune':
-                            require('./../tabs/ez_tune');
-                            TABS.ez_tune.initialize(content_ready);
-                            break;
+                        // case 'ez_tune':
+                        //     require('./../tabs/ez_tune');
+                        //     TABS.ez_tune.initialize(content_ready);
+                        //     break;
                         case 'search':
                             require('./../tabs/search');
                             TABS.search.initialize(content_ready);

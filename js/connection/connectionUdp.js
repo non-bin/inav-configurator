@@ -1,7 +1,7 @@
 'use strict'
 
 const  { ConnectionType, Connection } = require('./connection')
-const dgram = require('node:dgram');
+const dgram = require('dgram');
 const socket = dgram.createSocket('udp4');
 
 const { GUI } = require('./../gui');
